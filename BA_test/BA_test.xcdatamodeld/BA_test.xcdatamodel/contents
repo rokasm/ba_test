@@ -15,29 +15,29 @@
     <entity name="Geo" representedClassName="Geo" syncable="YES" codeGenerationType="class">
         <attribute name="lat" optional="YES" attributeType="String"/>
         <attribute name="lng" optional="YES" attributeType="String"/>
-        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address"/>
     </entity>
     <entity name="Post" representedClassName="Post" syncable="YES" codeGenerationType="class">
         <attribute name="body" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="userId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
-        <attribute name="username" optional="YES"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
         <attribute name="website" optional="YES" attributeType="String"/>
         <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address"/>
         <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Company"/>
     </entity>
     <elements>
-        <element name="Post" positionX="-28.30938720703125" positionY="-51.474853515625" width="128" height="103"/>
-        <element name="User" positionX="-31.76483154296875" positionY="72.5928955078125" width="128" height="163"/>
+        <element name="Post" positionX="-47.88128662109375" positionY="-71.97149658203125" width="128" height="118"/>
         <element name="Address" positionX="206.4113159179688" positionY="257.04443359375" width="128" height="118"/>
-        <element name="Company" positionX="-203.7556457519531" positionY="220.034423828125" width="128" height="74"/>
-        <element name="Geo" positionX="192.3667602539062" positionY="410.4368896484375" width="128" height="88"/>
+        <element name="Company" positionX="-238.8657531738281" positionY="285.2943115234375" width="128" height="74"/>
+        <element name="Geo" positionX="198.651123046875" positionY="402.2161865234375" width="128" height="73"/>
+        <element name="User" positionX="-41.29058837890625" positionY="67.5618896484375" width="128" height="163"/>
     </elements>
 </model>

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E450BD3C2907FA6600584F25 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450BD3B2907FA6600584F25 /* Network.swift */; };
+		E450BD3E2907FA7A00584F25 /* FetchedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450BD3D2907FA7A00584F25 /* FetchedData.swift */; };
+		E450BD432907FCEC00584F25 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450BD422907FCEC00584F25 /* MainViewModel.swift */; };
+		E450BD4529095C2800584F25 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450BD4429095C2800584F25 /* Post.swift */; };
+		E450BD4729095F8700584F25 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450BD4629095F8700584F25 /* User.swift */; };
+		E450BD492909637200584F25 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450BD482909637200584F25 /* Address.swift */; };
+		E450BD4C29096C0300584F25 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450BD4B29096C0300584F25 /* Company.swift */; };
 		E4FF84CB290698370055A73A /* BA_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF84CA290698370055A73A /* BA_testApp.swift */; };
 		E4FF84CD290698370055A73A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF84CC290698370055A73A /* MainView.swift */; };
 		E4FF84CF290698390055A73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FF84CE290698390055A73A /* Assets.xcassets */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E450BD3B2907FA6600584F25 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E450BD3D2907FA7A00584F25 /* FetchedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedData.swift; sourceTree = "<group>"; };
+		E450BD422907FCEC00584F25 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E450BD4429095C2800584F25 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E450BD4629095F8700584F25 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E450BD482909637200584F25 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		E450BD4B29096C0300584F25 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		E4FF84C7290698370055A73A /* BA_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BA_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FF84CA290698370055A73A /* BA_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_testApp.swift; sourceTree = "<group>"; };
 		E4FF84CC290698370055A73A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -36,6 +50,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E450BD3A2907FA6600584F25 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E450BD3B2907FA6600584F25 /* Network.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E450BD3F2907FCB400584F25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E450BD4A290968EF00584F25 /* CoreData */,
+				E450BD3D2907FA7A00584F25 /* FetchedData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E450BD412907FCEC00584F25 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E450BD422907FCEC00584F25 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E450BD4A290968EF00584F25 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E450BD4429095C2800584F25 /* Post.swift */,
+				E450BD4629095F8700584F25 /* User.swift */,
+				E450BD482909637200584F25 /* Address.swift */,
+				E450BD4B29096C0300584F25 /* Company.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		E4FF84BE290698370055A73A = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +105,9 @@
 		E4FF84C9290698370055A73A /* BA_test */ = {
 			isa = PBXGroup;
 			children = (
+				E450BD412907FCEC00584F25 /* ViewModel */,
+				E450BD3A2907FA6600584F25 /* Service */,
+				E450BD3F2907FCB400584F25 /* Model */,
 				E4FF84CA290698370055A73A /* BA_testApp.swift */,
 				E4FF84CC290698370055A73A /* MainView.swift */,
 				E4FF84CE290698390055A73A /* Assets.xcassets */,
@@ -143,10 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E450BD3C2907FA6600584F25 /* Network.swift in Sources */,
+				E450BD432907FCEC00584F25 /* MainViewModel.swift in Sources */,
 				E4FF84D4290698390055A73A /* Persistence.swift in Sources */,
+				E450BD4529095C2800584F25 /* Post.swift in Sources */,
+				E450BD492909637200584F25 /* Address.swift in Sources */,
 				E4FF84CD290698370055A73A /* MainView.swift in Sources */,
+				E450BD4729095F8700584F25 /* User.swift in Sources */,
+				E450BD4C29096C0300584F25 /* Company.swift in Sources */,
 				E4FF84D72906983A0055A73A /* BA_test.xcdatamodeld in Sources */,
 				E4FF84CB290698370055A73A /* BA_testApp.swift in Sources */,
+				E450BD3E2907FA7A00584F25 /* FetchedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
