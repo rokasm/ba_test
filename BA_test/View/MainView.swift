@@ -17,14 +17,19 @@ struct MainView: View {
     }
     
     var body: some View {
-        List {
-            ForEach(viewModel.posts) { post in
-                VStack {
-                    Text(post.title ?? "Untitled")
-                    Text(post.user?.username ?? "Untitled")
+        NavigationView {
+            List {
+                ForEach(viewModel.posts) { post in
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text(post.title ?? "Untitled")
+                        Text(post.user?.username ?? "Untitled").font(.subheadline).foregroundColor(.secondary)
+                    }.padding(5)
                 }
-            }
+            } .navigationTitle("Posts")
+                .refreshable {
+                    viewModel.getPosts()
+                }
         }
-        .navigationTitle("Posts")
+        
     }
 }

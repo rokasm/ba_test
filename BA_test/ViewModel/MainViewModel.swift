@@ -32,7 +32,7 @@ class MainViewModel: ObservableObject {
         
     }
     
-    private func getPosts() {
+    func getPosts() {
         network.fetch(from: postsEndpoint) { [weak self] data, error in
             if let dataSource = data, let posts = try? JSONDecoder().decode([FetchedPost].self, from: dataSource) {
                 for post in posts {
