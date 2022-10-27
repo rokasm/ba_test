@@ -13,10 +13,11 @@ struct BA_testApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView(viewModel: MainViewModel(network: Network())
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainView(
+                viewModel: MainViewModel(
+                    network: NetworkService()
+                )
             )
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

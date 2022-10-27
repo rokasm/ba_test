@@ -18,11 +18,11 @@ struct FetchedUser: Codable {
     let id: Int32
     let name: String
     let username: String
-    let address: Address
-    let company: Company
     let email: String
+    let address: Address
     let phone: String
     let website: String
+    let company: Company
     
     struct Address: Codable {
         let street: String
@@ -30,8 +30,6 @@ struct FetchedUser: Codable {
         let city: String
         let zipcode: String
         let geo: Location
-        let phone: String
-        let website: String
         
         struct Location: Codable {
             let lat: String
@@ -41,7 +39,7 @@ struct FetchedUser: Codable {
     
     struct Company: Codable {
         let name: String
-        let catchphrase: String
+        let catchPhrase: String
         let bs: String
     }
 }

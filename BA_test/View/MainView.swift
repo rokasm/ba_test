@@ -9,12 +9,6 @@ import SwiftUI
 import CoreData
 
 struct MainView: View {
-//    @Environment(\.managedObjectContext) private var viewContext
-//
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \Post.id, ascending: true)],
-//        animation: .default)
-//    var posts: FetchedResults<Post>
     
     @ObservedObject var viewModel: MainViewModel
     

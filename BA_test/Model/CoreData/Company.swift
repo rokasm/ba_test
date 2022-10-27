@@ -14,7 +14,7 @@ extension Company {
         
         company.name = fetchedCompany.name
         company.bs = fetchedCompany.bs
-        company.catchPhrase = fetchedCompany.catchphrase
+        company.catchPhrase = fetchedCompany.catchPhrase
         company.objectWillChange.send()
         
         return company

@@ -10,7 +10,7 @@ import CoreData
 extension Post {
     
     static func update(fetchedPost: FetchedPost, fetchedUser: FetchedUser, in context: NSManagedObjectContext) {
-        let request = fetchRequest(NSPredicate(format: "id = %@", fetchedPost.id))
+        let request = fetchRequest(NSPredicate(format: "id = %d", fetchedPost.id))
         let results = (try? context.fetch(request)) ?? []
         let post = results.first ?? Post(context: context)
         
