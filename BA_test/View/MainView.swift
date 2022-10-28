@@ -29,7 +29,9 @@ struct MainView: View {
                 .refreshable {
                     viewModel.getPosts()
                 }
+                .alert("Couldn't load posts", isPresented: $viewModel.showingError) {
+                    Button("Retry") { }
+                }
         }
-        
     }
 }

@@ -30,7 +30,8 @@ extension Geo {
         
         geo.lat = fetchedGeo.lat
         geo.lng = fetchedGeo.lng
-        
+        geo.objectWillChange.send()
+
         return geo
     }
 }
