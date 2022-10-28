@@ -32,7 +32,7 @@ class NetworkServiceTests: XCTestCase {
             if case .generic(let description) = error {
                 XCTFail("Error: \(description)")
                 return
-            } else if let data2 = data {
+            } else {
                 promise.fulfill()
             }
         }
@@ -45,11 +45,11 @@ class NetworkServiceTests: XCTestCase {
         let promise = expectation(description: "Data gets returned")
         
          sut.fetch(from: urlString) { data, error in
-            if case .generic(let description) = error {
+            if case .generic(_) = error {
                 promise.fulfill()
 
                 return
-            } else if let data2 = data {
+            } else {
                 XCTFail("Error: Call returned data")
 
             }
